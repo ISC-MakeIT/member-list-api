@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+
+[packages]
+mysql-connector-python = "*"
+aiohttp = "*"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+start = "python main.py"
+test = "sh -c 'python -m doctest *.py'"
+lint-mypy = "mypy --ignore-missing-imports ."
+lint-black = "black --check ."
+lint = "sh -c 'pipenv run lint-mypy && pipenv run lint-black'"
+format = "black ."
