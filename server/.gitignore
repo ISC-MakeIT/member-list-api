@@ -1,7 +1,0 @@
-.mypy_cache/
-.venv/*
-!.venv/.gitkeep
-black/
-pip-tools/
-pip/
-pipenv/
